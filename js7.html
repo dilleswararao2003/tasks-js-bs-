@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        #train {
+            width: 500px; 
+            position: relative;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveTrain {
+            0% { left: 0; }
+            25% { left: 25%; }
+            50% { left: 50%; }
+            75% { left: 75%; }
+            100% { left: 100%; }
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Train Animation</h1>
+    <img id="train" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmdtNzg0ZndmcnlwZXMxa3k4b3RhcG85N3dpM21xMmE3Mndmbnh4MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NGSbD5vI6lUvC/giphy.gif" alt="Train">
+
+    <div class="controls">
+        <button onclick="startAnimation()">Restart</button>
+        <button onclick="pauseAnimation()">Pause</button>
+        <button onclick="resetAnimation()">Start</button>
+    </div>
+
+    <script>
+        const train = document.getElementById("train");
+        
+        function startAnimation() {
+            train.style.animationPlayState = "running";
+        }
+
+        function pauseAnimation() {
+            train.style.animationPlayState = "paused";
+        }
+
+        function resetAnimation() {
+            train.style.animation = "none"; 
+            void train.offsetWidth; 
+            train.style.animation = "moveTrain 8s linear infinite";}
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            background-color: lightblue; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            background-color:pink;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 0 auto;
+            width: 50%;
+            text-align: left; /* Align form content to the left */
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 5px;
+            margin-bottom: 5px; /* Adjust the spacing between labels and input boxes */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid yellow;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .feedback {
+            color:blue;
+            font-size: 25px;
+        }
+
+        .checkbox-label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration</h1>
+    <div class="container">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" onkeyup="validate('firstName')">
+        <span id="firstNameFeedback" class="feedback"></span>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" onkeyup="validate('lastName')">
+        <span id="lastNameFeedback" class="feedback"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" onkeyup="validate('email')">
+        <span id="emailFeedback" class="feedback"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" onkeyup="validate('password')">
+        <span id="passwordFeedback" class="feedback"></span>
+
+        <label for="reenterPassword">Re-enter Password:</label>
+        <input type="password" id="reenterPassword" onkeyup="validate('reenterPassword')">
+        <span id="reenterPasswordFeedback" class="feedback"></span>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" onchange="validate('gender')">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <span id="genderFeedback" class="feedback"></span>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" onkeyup="validate('age')">
+        <span id="ageFeedback" class="feedback"></span>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" onkeyup="validate('phoneNumber')">
+        <span id="phoneNumberFeedback" class="feedback"></span>
+
+        <label for="address">Address:</label>
+        <textarea id="address" rows="3" onkeyup="validate('address')"></textarea>
+        <span id="addressFeedback" class="feedback"></span>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" onkeyup="validate('state')">
+        <span id="stateFeedback" class="feedback"></span>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" onkeyup="validate('country')">
+        <span id="countryFeedback" class="feedback"></span>
+
+        <label>Languages Known:</label>
+        <input type="checkbox" id="english" onchange="validateLanguages()"> English
+        <input type="checkbox" id="spanish" onchange="validateLanguages()"> Spanish
+        <input type="checkbox" id="french" onchange="validateLanguages()"> French
+
+        <input type="checkbox" id="agree" onchange="validateAgree()"> I agree to the terms and conditions
+        <br>
+
+        <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <script>
+        function validate(field) {
+            const value = document.getElementById(field).value;
+            let feedback = "";
+
+            if (value.length < 3) feedback = "bad";
+            else if (value.length <= 10) feedback = "avg";
+            else feedback = "good";
+
+            document.getElementById(field + 'Feedback').textContent = feedback;
+        }
+
+        function validateLanguages() {
+            
+        }
+
+        function validateAgree() {
+           
+        }
+
+        function submitForm() {
+           
+            alert('Form submitted!');
+        }
+    </script>
+</body>
+</html>

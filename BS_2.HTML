@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builderz Construction</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Header with yellow background */
+        .header {
+            background-color:greenyellow;
+            color: #333;
+            padding: 20px;
+            text-align:left;
+        }
+
+        /* Navigation bar with blue background */
+        .navbar {
+            background-color: #0074e4;
+            text-align: left;
+        }
+
+        /* Content with construction background image */
+        .content {
+            background-image: url('https://rsdesignandconstruction.in/wp-content/uploads/2022/12/start-a-construction-company.png');
+            background-size:contain;
+            background-position: center center;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        /* Footer with alternating background colors */
+        .footer {
+            background-color:skyblue;
+            padding: 30px 0;
+        }
+
+        .footer .section:nth-child(odd) {
+            background-color: #444;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer .section:nth-child(even) {
+            background-color: #555;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Style for headings */
+        h1, h2, h3 {
+            color:whitesmoke;
+        }
+
+        /* Style for links in the navbar */
+        .navbar .nav-link {
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header with Horizontal Navigation Bar -->
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Builderz Construction</h1>
+            </div>
+            <div class="col-md-6">
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content with Construction Background Image -->
+<div class="container-fluid content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Welcome to Builderz Construction</h2>
+                <p>Your Trusted Partner in Construction</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer with Sections -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 section">
+                <h3>Expert Workers</h3>
+                <p>Our team of experts is highly skilled and experienced in the construction industry.</p>
+            </div>
+            <div class="col-md-4 section">
+                <h3>Quality Work</h3>
+                <p>We are committed to delivering top-notch quality in all our construction projects.</p>
+            </div>
+            <div class="col-md-4 section">
+                <h3>24/7 Support</h3>
+                <p>We provide round-the-clock support to address your construction needs and concerns.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

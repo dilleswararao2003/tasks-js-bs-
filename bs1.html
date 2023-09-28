@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar {
+            background-color: blue;
+            padding: 20px 0;
+        }
+        .navbar-nav {
+            text-align: center;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .content-area {
+            text-align: center;
+            padding: 30px;
+        }
+        .left-content-area {
+            text-align: left;
+            background-color: red;
+            color: white;
+        }
+        .right-content-area {
+            background-color: yellow;
+            color: red;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>Ethnus layout </h1>
+</div>
+
+<!-- Vertical Navigation Bar using Bootstrap -->
+<nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content Areas -->
+<div class="container">
+    <div class="row">
+        <!-- Left Content Area -->
+        <div class="col-md-10 content-area left-content-area">
+            <h2>Content Area 1</h2>
+            <p>This is the left content area</p>
+        </div>
+
+        <!-- Right Content Area -->
+        <div class="col-md-2 row-col-md-auto content-area right-content-area">
+            <h2>Content Area 2</h2>
+            <p>This is the right content area.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

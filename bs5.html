@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page with Form Sections</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Web Page with Form Sections</h1>
+    
+    <!-- Main Form Section -->
+    <form id="myForm">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+            </div>
+        </div>
+
+    
+        <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                </div>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="address">Address</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-home"></i></span>
+                </div>
+                <input type="text" class="form-control" id="address" placeholder="Enter your address">
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="city">City</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-city"></i></span>
+                </div>
+                <input type="text" class="form-control" id="city" placeholder="Enter your city">
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            <label for="state">State</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-flag"></i></span>
+                </div>
+                <input type="text" class="form-control" id="state" placeholder="Enter your state">
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            <label for="projectDescription">Project Description</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-comment"></i></span>
+                </div>
+                <textarea class="form-control" id="projectDescription" rows="3" placeholder="Enter project description"></textarea>
+            </div>
+        </div>
+
+        
+        <button type="button" class="btn btn-primary" onclick="validateForm()">Send</button>
+    </form>
+
+    
+    <form id="unfilledDataForm" style="display: none;">
+        <h2>Please Fill the Following:</h2>
+        
+    </form>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+function validateForm() {
+    const fields = [
+        { id: "firstName", label: "First Name" },
+        { id: "lastName", label: "Last Name" },
+        { id: "email", label: "Email" },
+        { id: "phone", label: "Phone" },
+        { id: "address", label: "Address" },
+        { id: "city", label: "City" },
+        { id: "state", label: "State" },
+        { id: "projectDescription", label: "Project Description" },
+    ];
+
+    let isAllFilled = true;
+    const unfilledForm = document.getElementById("unfilledDataForm");
+    unfilledForm.innerHTML = '<h2>Please Fill the Following:</h2>';
+
+    for(let field of fields) {
+        const value = document.getElementById(field.id).value;
+        if (!value) {
+            isAllFilled = false;
+            unfilledForm.innerHTML += `
+                <div class="form-group">
+                    <label for="${field.id}">${field.label}</label>
+                    <input type="text" class="form-control" id="unfilled_${field.id}" placeholder="Enter ${field.label.toLowerCase()}">
+                </div>
+            `;
+        }
+    }
+
+    if (!isAllFilled) {
+        unfilledForm.style.display = "block";
+    } else {
+        unfilledForm.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
